@@ -17,7 +17,7 @@ namespace Test
             options = new DbContextOptionsBuilder<DataContext>()
                 .UseSqlServer("Server=CLD12619\\MSSQLSERVER16;Database=Bug;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
                 .EnableSensitiveDataLogging()
-               // .UseInMemoryDatabase(Guid.NewGuid().ToString())
+              // .UseInMemoryDatabase(Guid.NewGuid().ToString())
                 .Options;
         }
 

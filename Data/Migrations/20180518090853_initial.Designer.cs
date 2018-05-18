@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20180518085305_initial")]
+    [Migration("20180518090853_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -69,11 +69,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop1_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<bool?>("Value")
-                                .HasColumnName("Prop1");
+                            b1.Property<bool?>("Value");
 
                             b1.ToTable("Data1s");
 
@@ -85,16 +83,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop15", b1 =>
                         {
-                            b1.Property<long?>("Data1Id")
+                            b1.Property<long>("Data1Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop15_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop15")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data1s");
@@ -107,16 +103,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop17", b1 =>
                         {
-                            b1.Property<long?>("Data1Id")
+                            b1.Property<long>("Data1Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop17_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop17")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data1s");
@@ -129,16 +123,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop19", b1 =>
                         {
-                            b1.Property<long?>("Data1Id")
+                            b1.Property<long>("Data1Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop19_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop19")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data1s");
@@ -156,11 +148,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop2_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop2")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data1s");
@@ -173,16 +163,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop20", b1 =>
                         {
-                            b1.Property<long?>("Data1Id")
+                            b1.Property<long>("Data1Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop20_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop20")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data1s");
@@ -200,11 +188,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop3_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop3")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data1s");
@@ -217,16 +203,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop7", b1 =>
                         {
-                            b1.Property<long?>("Data1Id")
+                            b1.Property<long>("Data1Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop7_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop7")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data1s");
@@ -244,11 +228,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop10_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<decimal?>("Value")
-                                .HasColumnName("Prop10")
                                 .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data1s");
@@ -261,16 +243,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDecimal", "Prop13", b1 =>
                         {
-                            b1.Property<long?>("Data1Id")
+                            b1.Property<long>("Data1Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop13_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<decimal?>("Value")
-                                .HasColumnName("Prop13")
                                 .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data1s");
@@ -283,16 +263,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDecimal", "Prop16", b1 =>
                         {
-                            b1.Property<long?>("Data1Id")
+                            b1.Property<long>("Data1Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop16_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<decimal?>("Value")
-                                .HasColumnName("Prop16")
                                 .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data1s");
@@ -310,11 +288,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop8_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<decimal?>("Value")
-                                .HasColumnName("Prop8")
                                 .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data1s");
@@ -327,16 +303,16 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDouble", "Prop12", b1 =>
                         {
-                            b1.Property<long?>("Data1Id")
+                            b1.Property<long>("Data1Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop12_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<double?>("Value")
-                                .HasColumnName("Prop12");
+                            b1.Property<decimal?>("Value")
+                                .HasConversion(new ValueConverter<decimal, decimal>(v => default(decimal), v => default(decimal), new ConverterMappingHints(precision: 38, scale: 17)))
+                                .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data1s");
 
@@ -348,16 +324,16 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDouble", "Prop18", b1 =>
                         {
-                            b1.Property<long?>("Data1Id")
+                            b1.Property<long>("Data1Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop18_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<double?>("Value")
-                                .HasColumnName("Prop18");
+                            b1.Property<decimal?>("Value")
+                                .HasConversion(new ValueConverter<decimal, decimal>(v => default(decimal), v => default(decimal), new ConverterMappingHints(precision: 38, scale: 17)))
+                                .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data1s");
 
@@ -374,11 +350,11 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop4_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<double?>("Value")
-                                .HasColumnName("Prop4");
+                            b1.Property<decimal?>("Value")
+                                .HasConversion(new ValueConverter<decimal, decimal>(v => default(decimal), v => default(decimal), new ConverterMappingHints(precision: 38, scale: 17)))
+                                .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data1s");
 
@@ -395,11 +371,11 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop5_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<double?>("Value")
-                                .HasColumnName("Prop5");
+                            b1.Property<decimal?>("Value")
+                                .HasConversion(new ValueConverter<decimal, decimal>(v => default(decimal), v => default(decimal), new ConverterMappingHints(precision: 38, scale: 17)))
+                                .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data1s");
 
@@ -411,16 +387,16 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDouble", "Prop9", b1 =>
                         {
-                            b1.Property<long?>("Data1Id")
+                            b1.Property<long>("Data1Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop9_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<double?>("Value")
-                                .HasColumnName("Prop9");
+                            b1.Property<decimal?>("Value")
+                                .HasConversion(new ValueConverter<decimal, decimal>(v => default(decimal), v => default(decimal), new ConverterMappingHints(precision: 38, scale: 17)))
+                                .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data1s");
 
@@ -437,11 +413,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop11_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<int?>("Value")
-                                .HasColumnName("Prop11");
+                            b1.Property<int?>("Value");
 
                             b1.ToTable("Data1s");
 
@@ -453,16 +427,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueInteger", "Prop14", b1 =>
                         {
-                            b1.Property<long?>("Data1Id")
+                            b1.Property<long>("Data1Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop14_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<int?>("Value")
-                                .HasColumnName("Prop14");
+                            b1.Property<int?>("Value");
 
                             b1.ToTable("Data1s");
 
@@ -479,11 +451,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop6_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<int?>("Value")
-                                .HasColumnName("Prop6");
+                            b1.Property<int?>("Value");
 
                             b1.ToTable("Data1s");
 
@@ -503,11 +473,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop1_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<bool?>("Value")
-                                .HasColumnName("Prop1");
+                            b1.Property<bool?>("Value");
 
                             b1.ToTable("Data2s");
 
@@ -519,16 +487,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop15", b1 =>
                         {
-                            b1.Property<long?>("Data2Id")
+                            b1.Property<long>("Data2Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop15_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop15")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data2s");
@@ -541,16 +507,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop17", b1 =>
                         {
-                            b1.Property<long?>("Data2Id")
+                            b1.Property<long>("Data2Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop17_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop17")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data2s");
@@ -563,16 +527,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop19", b1 =>
                         {
-                            b1.Property<long?>("Data2Id")
+                            b1.Property<long>("Data2Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop19_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop19")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data2s");
@@ -585,16 +547,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop2", b1 =>
                         {
-                            b1.Property<long?>("Data2Id")
+                            b1.Property<long>("Data2Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop2_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop2")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data2s");
@@ -607,16 +567,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop20", b1 =>
                         {
-                            b1.Property<long?>("Data2Id")
+                            b1.Property<long>("Data2Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop20_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop20")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data2s");
@@ -629,16 +587,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop3", b1 =>
                         {
-                            b1.Property<long?>("Data2Id")
+                            b1.Property<long>("Data2Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop3_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop3")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data2s");
@@ -651,16 +607,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop7", b1 =>
                         {
-                            b1.Property<long?>("Data2Id")
+                            b1.Property<long>("Data2Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop7_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop7")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data2s");
@@ -678,11 +632,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop10_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<decimal?>("Value")
-                                .HasColumnName("Prop10")
                                 .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data2s");
@@ -700,11 +652,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop13_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<decimal?>("Value")
-                                .HasColumnName("Prop13")
                                 .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data2s");
@@ -722,11 +672,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop16_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<decimal?>("Value")
-                                .HasColumnName("Prop16")
                                 .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data2s");
@@ -744,11 +692,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop8_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<decimal?>("Value")
-                                .HasColumnName("Prop8")
                                 .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data2s");
@@ -761,16 +707,16 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDouble", "Prop12", b1 =>
                         {
-                            b1.Property<long?>("Data2Id")
+                            b1.Property<long>("Data2Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop12_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<double?>("Value")
-                                .HasColumnName("Prop12");
+                            b1.Property<decimal?>("Value")
+                                .HasConversion(new ValueConverter<decimal, decimal>(v => default(decimal), v => default(decimal), new ConverterMappingHints(precision: 38, scale: 17)))
+                                .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data2s");
 
@@ -782,16 +728,16 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDouble", "Prop18", b1 =>
                         {
-                            b1.Property<long?>("Data2Id")
+                            b1.Property<long>("Data2Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop18_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<double?>("Value")
-                                .HasColumnName("Prop18");
+                            b1.Property<decimal?>("Value")
+                                .HasConversion(new ValueConverter<decimal, decimal>(v => default(decimal), v => default(decimal), new ConverterMappingHints(precision: 38, scale: 17)))
+                                .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data2s");
 
@@ -803,16 +749,16 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDouble", "Prop4", b1 =>
                         {
-                            b1.Property<long?>("Data2Id")
+                            b1.Property<long>("Data2Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop4_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<double?>("Value")
-                                .HasColumnName("Prop4");
+                            b1.Property<decimal?>("Value")
+                                .HasConversion(new ValueConverter<decimal, decimal>(v => default(decimal), v => default(decimal), new ConverterMappingHints(precision: 38, scale: 17)))
+                                .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data2s");
 
@@ -824,16 +770,16 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDouble", "Prop5", b1 =>
                         {
-                            b1.Property<long?>("Data2Id")
+                            b1.Property<long>("Data2Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop5_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<double?>("Value")
-                                .HasColumnName("Prop5");
+                            b1.Property<decimal?>("Value")
+                                .HasConversion(new ValueConverter<decimal, decimal>(v => default(decimal), v => default(decimal), new ConverterMappingHints(precision: 38, scale: 17)))
+                                .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data2s");
 
@@ -845,16 +791,16 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDouble", "Prop9", b1 =>
                         {
-                            b1.Property<long?>("Data2Id")
+                            b1.Property<long>("Data2Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop9_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<double?>("Value")
-                                .HasColumnName("Prop9");
+                            b1.Property<decimal?>("Value")
+                                .HasConversion(new ValueConverter<decimal, decimal>(v => default(decimal), v => default(decimal), new ConverterMappingHints(precision: 38, scale: 17)))
+                                .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data2s");
 
@@ -871,11 +817,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop11_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<int?>("Value")
-                                .HasColumnName("Prop11");
+                            b1.Property<int?>("Value");
 
                             b1.ToTable("Data2s");
 
@@ -892,11 +836,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop14_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<int?>("Value")
-                                .HasColumnName("Prop14");
+                            b1.Property<int?>("Value");
 
                             b1.ToTable("Data2s");
 
@@ -913,11 +855,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop6_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<int?>("Value")
-                                .HasColumnName("Prop6");
+                            b1.Property<int?>("Value");
 
                             b1.ToTable("Data2s");
 
@@ -937,11 +877,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop1_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<bool?>("Value")
-                                .HasColumnName("Prop1");
+                            b1.Property<bool?>("Value");
 
                             b1.ToTable("Data3s");
 
@@ -953,16 +891,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop15", b1 =>
                         {
-                            b1.Property<long?>("Data3Id")
+                            b1.Property<long>("Data3Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop15_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop15")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data3s");
@@ -975,16 +911,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop17", b1 =>
                         {
-                            b1.Property<long?>("Data3Id")
+                            b1.Property<long>("Data3Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop17_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop17")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data3s");
@@ -997,16 +931,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop19", b1 =>
                         {
-                            b1.Property<long?>("Data3Id")
+                            b1.Property<long>("Data3Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop19_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop19")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data3s");
@@ -1019,16 +951,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop2", b1 =>
                         {
-                            b1.Property<long?>("Data3Id")
+                            b1.Property<long>("Data3Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop2_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop2")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data3s");
@@ -1041,16 +971,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop20", b1 =>
                         {
-                            b1.Property<long?>("Data3Id")
+                            b1.Property<long>("Data3Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop20_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop20")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data3s");
@@ -1063,16 +991,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop3", b1 =>
                         {
-                            b1.Property<long?>("Data3Id")
+                            b1.Property<long>("Data3Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop3_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop3")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data3s");
@@ -1085,16 +1011,14 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDateTime", "Prop7", b1 =>
                         {
-                            b1.Property<long?>("Data3Id")
+                            b1.Property<long>("Data3Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop7_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<DateTime?>("Value")
-                                .HasColumnName("Prop7")
                                 .HasColumnType("datetime2");
 
                             b1.ToTable("Data3s");
@@ -1112,11 +1036,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop10_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<decimal?>("Value")
-                                .HasColumnName("Prop10")
                                 .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data3s");
@@ -1134,11 +1056,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop13_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<decimal?>("Value")
-                                .HasColumnName("Prop13")
                                 .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data3s");
@@ -1156,11 +1076,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop16_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<decimal?>("Value")
-                                .HasColumnName("Prop16")
                                 .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data3s");
@@ -1178,11 +1096,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop8_Source")
                                 .HasMaxLength(64);
 
                             b1.Property<decimal?>("Value")
-                                .HasColumnName("Prop8")
                                 .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data3s");
@@ -1195,16 +1111,16 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDouble", "Prop12", b1 =>
                         {
-                            b1.Property<long?>("Data3Id")
+                            b1.Property<long>("Data3Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop12_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<double?>("Value")
-                                .HasColumnName("Prop12");
+                            b1.Property<decimal?>("Value")
+                                .HasConversion(new ValueConverter<decimal, decimal>(v => default(decimal), v => default(decimal), new ConverterMappingHints(precision: 38, scale: 17)))
+                                .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data3s");
 
@@ -1216,16 +1132,16 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDouble", "Prop18", b1 =>
                         {
-                            b1.Property<long?>("Data3Id")
+                            b1.Property<long>("Data3Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop18_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<double?>("Value")
-                                .HasColumnName("Prop18");
+                            b1.Property<decimal?>("Value")
+                                .HasConversion(new ValueConverter<decimal, decimal>(v => default(decimal), v => default(decimal), new ConverterMappingHints(precision: 38, scale: 17)))
+                                .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data3s");
 
@@ -1237,16 +1153,16 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDouble", "Prop4", b1 =>
                         {
-                            b1.Property<long?>("Data3Id")
+                            b1.Property<long>("Data3Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop4_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<double?>("Value")
-                                .HasColumnName("Prop4");
+                            b1.Property<decimal?>("Value")
+                                .HasConversion(new ValueConverter<decimal, decimal>(v => default(decimal), v => default(decimal), new ConverterMappingHints(precision: 38, scale: 17)))
+                                .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data3s");
 
@@ -1258,16 +1174,16 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDouble", "Prop5", b1 =>
                         {
-                            b1.Property<long?>("Data3Id")
+                            b1.Property<long>("Data3Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop5_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<double?>("Value")
-                                .HasColumnName("Prop5");
+                            b1.Property<decimal?>("Value")
+                                .HasConversion(new ValueConverter<decimal, decimal>(v => default(decimal), v => default(decimal), new ConverterMappingHints(precision: 38, scale: 17)))
+                                .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data3s");
 
@@ -1279,16 +1195,16 @@ namespace Data.Migrations
 
                     b.OwnsOne("GDB.Vinn.DataWarehouse.DataSets.ComplexTypes.ReferenceValueDouble", "Prop9", b1 =>
                         {
-                            b1.Property<long?>("Data3Id")
+                            b1.Property<long>("Data3Id")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop9_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<double?>("Value")
-                                .HasColumnName("Prop9");
+                            b1.Property<decimal?>("Value")
+                                .HasConversion(new ValueConverter<decimal, decimal>(v => default(decimal), v => default(decimal), new ConverterMappingHints(precision: 38, scale: 17)))
+                                .HasColumnType("decimal(32,12)");
 
                             b1.ToTable("Data3s");
 
@@ -1305,11 +1221,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop11_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<int?>("Value")
-                                .HasColumnName("Prop11");
+                            b1.Property<int?>("Value");
 
                             b1.ToTable("Data3s");
 
@@ -1326,11 +1240,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop14_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<int?>("Value")
-                                .HasColumnName("Prop14");
+                            b1.Property<int?>("Value");
 
                             b1.ToTable("Data3s");
 
@@ -1347,11 +1259,9 @@ namespace Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("Source")
-                                .HasColumnName("Prop6_Source")
                                 .HasMaxLength(64);
 
-                            b1.Property<int?>("Value")
-                                .HasColumnName("Prop6");
+                            b1.Property<int?>("Value");
 
                             b1.ToTable("Data3s");
 

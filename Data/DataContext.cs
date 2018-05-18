@@ -22,43 +22,6 @@ namespace Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-
-            foreach (var pb in builder.Model
-                .GetEntityTypes()
-                .SelectMany(t => t.GetProperties())
-                .Where(p => p.ClrType == typeof(decimal))
-                .Select(p => builder.Entity(p.DeclaringEntityType.ClrType).Property(p.Name)))
-            {
-
-                pb.HasColumnType("decimal(32,12)");
-            }
-            foreach (var pb in builder.Model
-                .GetEntityTypes()
-                .SelectMany(t => t.GetProperties())
-                .Where(p => p.ClrType == typeof(decimal?))
-                .Select(p => builder.Entity(p.DeclaringEntityType.ClrType).Property(p.Name)))
-            {
-                pb.HasColumnType("decimal(32,12)");
-            }
-            foreach (var pb in builder.Model
-                .GetEntityTypes()
-                .SelectMany(t => t.GetProperties())
-                .Where(p => p.ClrType == typeof(string))
-                .Select(p => builder.Entity(p.DeclaringEntityType.ClrType).Property(p.Name)))
-            {
-                pb.HasMaxLength(256);
-            }
-
-            foreach (var pb in builder.Model
-                .GetEntityTypes()
-                .SelectMany(t => t.GetProperties())
-                .Where(p => p.ClrType == typeof(DateTime))
-                .Select(p => builder.Entity(p.DeclaringEntityType.ClrType).Property(p.Name)))
-            {
-                pb.HasColumnType("datetime2");
-            }
-
-
             builder.ApplyConfiguration(new Data1Config());
             builder.ApplyConfiguration(new Data2Config());
             builder.ApplyConfiguration(new Data3Config());
@@ -73,7 +36,7 @@ namespace Data
         {
             builder.HasKey(i => i.Id);
             builder.Property(i => i.EntityId).IsRequired();
-            builder.SetupReferenceValues();
+          //  builder.SetupReferenceValues();
         }
     }
 
@@ -83,7 +46,7 @@ namespace Data
         {
             builder.HasKey(i => i.Id);
             builder.Property(i => i.EntityId).IsRequired();
-            builder.SetupReferenceValues();
+           // builder.SetupReferenceValues();
         }
     }
     public class Data3Config : IEntityTypeConfiguration<Data3>
@@ -92,7 +55,7 @@ namespace Data
         {
             builder.HasKey(i => i.Id);
             builder.Property(i => i.EntityId).IsRequired();
-            builder.SetupReferenceValues();
+        //    builder.SetupReferenceValues();
         }
     }
 
@@ -121,11 +84,6 @@ namespace Data
                 else if (property.PropertyType == typeof(ReferenceValueInteger))
                 {
                     builder.OwnsReferenceValueInteger(property.Name);
-                }
-
-                else if (property.PropertyType == typeof(ReferenceValueDouble))
-                {
-                    builder.OwnsReferenceValueDouble(property.Name);
                 }
                 else if (property.PropertyType == typeof(ReferenceValueDouble))
                 {
